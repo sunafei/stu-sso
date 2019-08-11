@@ -1,0 +1,15 @@
+server:
+  port: 8082
+  context-path: /client1
+security:
+  user:
+    password: 123456
+  oauth2:
+    client:
+      client-id: sso1
+      client-secret: secret1
+      user-authorization-uri: http://127.0.0.1:8081/server/oauth/authorize
+      access-token-uri: http://127.0.0.1:8081/server/oauth/token
+    resource:
+      jwt:
+        key-uri: http://127.0.0.1:8081/server/oauth/token_key
